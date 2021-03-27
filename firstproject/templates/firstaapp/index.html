@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is tempaltes tag</h1>
+    <h1>Employee information</h1>
+    {% if emp_list%}
+    <table>
+      <thead>
+        <th>EmpNO</th>
+        <th>Empname</th>
+        <th>Empsal</th>
+        <th>Empaddr</th>
+
+      </thead>
+      {%for emp in emp_list%}
+      <tr>
+        <td>eno</td>
+        <td>ename</td>
+        <td>esal</td>
+        <td>eaddr</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {%else%}
+    <p>No emplayess found</p>
+    {% endif %}
+
+  </body>
+</html>
